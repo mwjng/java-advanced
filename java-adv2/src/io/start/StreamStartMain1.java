@@ -1,6 +1,6 @@
 package io.start;
 
-import java.io.FileNotFoundException;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -12,5 +12,12 @@ public class StreamStartMain1 {
         fos.write(66);
         fos.write(67);
         fos.close();
+
+        FileInputStream fis = new FileInputStream("temp/hello.dat");
+        System.out.println(fis.read());
+        System.out.println(fis.read());
+        System.out.println(fis.read());
+        System.out.println(fis.read());
+        fis.close();
     }
 }
